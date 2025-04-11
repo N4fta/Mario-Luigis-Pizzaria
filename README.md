@@ -84,6 +84,8 @@ This software uses the following open source packages:
 
 Created with the help of some Fontys students at [Fontys](https://www.fontys.nl/).
 
+Developed in Winter 2023
+
 ### My Links
 
 > [neo-dev.org](https://neo-dev.org) &nbsp;&middot;&nbsp;
