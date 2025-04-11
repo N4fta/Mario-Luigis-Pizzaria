@@ -1,0 +1,114 @@
+body
+{
+background-color:#9ddfa0;
+}
+h1 
+{
+color: #008619;
+text-align: center;
+font-size: 50px;
+}
+.header {
+display: flex;
+justify-content: center;
+align-items: center;
+width: 100%;
+padding: 20px;
+
+}
+div.navigation_buttons{
+position: absolute;
+left: 50px;
+top: 20px;
+}
+div.home {
+position: absolute;
+left: 50px;
+top: 20px;
+}
+table {
+border-collapse: collapse;
+width: 100%;
+}
+
+th, td {
+text-align: left;
+padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+background-color: #07d40d;
+color: white;
+}
+
+div.flex{
+display: flex;
+width: 90%;
+}
+
+ol.c {
+flex:1;
+list-style-type: upper-roman;
+font-size: 24px;
+word-wrap: break-word;
+max-width: 70%;
+}
+
+.button {
+flex:1;
+
+border: none;
+background-color: #4CAF50;
+padding: 30px 40px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 30px;
+cursor: pointer;
+margin-top: 50px;
+margin-left: 50%;
+}
+
+/* The alert message boxes - from W3Schools */
+.alert {
+font-size: 40px;
+padding: 20px;
+background-color: #008619;
+color: black;
+margin-bottom: 15px;
+position:absolute;
+bottom:3%;
+left: 3%;
+width:90%;
+}
+
+.alert2 {
+font-size: 40px;
+padding: 20px;
+background-color: #aaad03;
+color: black;
+margin-bottom: 15px;
+position:absolute;
+bottom:3%;
+left: 3%;
+width:90%;
+}
+
+/* The close button */
+.closebtn {
+margin-left: 15px;
+color: white;
+font-weight: bold;
+float: right;
+font-size: 22px;
+line-height: 20px;
+cursor: pointer;
+transition: 0.3s;
+}
+
+/* When moving the mouse over the close button */
+.closebtn:hover {
+color: black;
+} 

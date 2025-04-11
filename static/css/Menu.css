@@ -1,0 +1,157 @@
+*{
+margin: 0;
+padding: 0 ;
+}
+body{
+background-color: #fcd8d8de;
+}
+
+
+.navigation {
+list-style-type: none;
+margin: 0;
+padding: 0;
+overflow: hidden;
+background-color: #FF0000;
+display: flex; /* Add this line */
+justify-content: center; /* Center the navigation buttons horizontally */
+position: fixed; /* Fix it to the top */
+top: 0;
+width: 100%; /* Make it span the full width */
+}
+
+.navigation li {
+/* Remove float: left; */
+display: inline; /* Display the list items inline */
+margin: 0 10px; /* Add some margin to separate the buttons */
+}
+
+.navigation li a {
+display: block;
+color: white;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+}
+
+.navigation li a:hover {
+background-color: #9b2929;
+}
+
+
+
+.header {
+display: flex;
+justify-content: center;
+align-items: center;
+width: 100%;
+padding: 20px;
+
+}
+
+h1 {
+text-align: center;
+font-size: 50px;
+}
+
+.navigation_buttons {
+display: flex;
+align-items: center;
+}
+.home {
+position: absolute;
+left: 50px;
+top: 50px;
+}
+.cart {
+position: absolute;
+right: 50px;
+top: 50px;
+}
+
+.button-container {
+
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+
+.menu-button {
+text-decoration: none;
+}
+
+.button {
+margin: 5px;
+}
+.number{
+width: 50px;
+text-align: center;
+}
+.cart_page{
+text-align: center;
+top: 200px;
+left: 50px;
+
+}
+.cart_page table {
+font-family: arial, sans-serif;
+border-collapse: collapse;
+width: 90%;
+left: 50px;
+top: 200px;
+}
+
+.cart_page td, th {
+border: 1px solid #dddddd;
+text-align: left;
+padding: 8px;
+width: auto;
+left: 50px;
+top: 200px;
+}
+
+.cart_page tr:nth-child(even) {
+background-color: #dddddd;
+}
+.cart_page tr:nth-child(odd) {
+background-color: #FF0000;
+}
+.home_cart{
+
+    top:20px;
+    left:10px;
+    }
+.send{
+
+    top: 600px;
+    left: 100px;
+}
+.body_notes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    margin: 0;
+    padding: 0;
+}
+
+.notes {
+    width: 400px;
+}
+
+.notes_page {
+    text-align: center;
+    font-size: medium;
+}
+
+form {
+    text-align: center;
+    font-size: medium;
+}
+.submit{
+background-color:#FF0000 ;
+padding: 10px;
+
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+    <head>
+        <title>Login page</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/Login.css') }}"> 
+    </head>
+    <body>
+        <br><br><br><br>
+        <div class="send">
+            <form method="POST", action="">
+                {{ form.hidden_tag() }}
+                <h2 class="firefox">Login</h2>
+                <fieldset>
+                    <div>
+                        {{ form.email.label }}
+                        {{ form.email }}
+                    </div>
+                    <div>
+                        {{ form.password.label }}
+                        {{ form.password }}
+                    </div>
+                    <div>
+                        {{ form.remember(class="form-check-input") }}
+                        {{ form.remember.label(class="form-check-label") }}
+                    </div>
+                </fieldset>
+                <div>
+                    <button style="text-decoration: none;" >{{ form.submit }}</button>
+                </div>
+                <!--<small class="text-muted ml-2">
+                    <a href="#"> Forgot password? </a>
+                </small>-->
+            </form>
+            {% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <div class="alert">
+      {% for message in messages %}
+        <div class="alert-info">{{ message }}</div>
+      {% endfor %}
+    </div>
+    {% set messages = [] %} {# Clear the messages after displaying them #}
+  {% endif %}
+{% endwith %}
+
+            <div>
+                <small>
+                    <!--Not part of the family get? <a class="ml-2" href="../Register">Register</a>-->
+                </small>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Luigi's page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/Luigi.css') }}"> 
+    <meta http-equiv="refresh" content="5">
+</head>
+<body>
+    
+    <div class="header">
+        <div class="logo">
+            <h1>Luigi's page</h1>
+        </div>
+        <div class="navigation_buttons">
+            <a href="../Yoshi/" class="home">
+                <img id="Luigi" src="../static/images/Luigi.png" alt="Luigi-Hat" width="150" height="150" />
+            </a>
+        </div>
+    </div>
+    <br>
+    
+    <hr>
+    <br>
+    <div class="flex">
+        <ol class="c">
+            {% if orders == [] %}
+                <p>There are no orders at the moment!</p>
+            {% else %}
+                {% for order in orders %}
+                <li>
+                    <b>Table: {{ order['table'] }}</b>
+                    <ul>
+                    {% for item in order['pizzas'] %}
+                        <li> {{ item['name'] }} - {{ item["quantity"] }} - Notes: {{ item['notes'] }}<br></li>
+                    {% endfor %}
+                    </ul>
+                </li>
+                {% endfor %}
+            {% endif %}
+        </ol>
+
+        <form action="/baking_orders" method="GET">
+            {% if cooldown == True %}
+            <input type="submit" class="button" value="Put in oven" disabled = True>
+            {% elif cooldown == False %}
+            <input type="submit" class="button" value="Put in oven" disable = False>
+            {% endif %}
+        </form>
+
+        {% if cooldown == True %}
+        <div class="alert">Wait for the oven to empty!</div>
+        {% endif %}
+
+        {% if notificationOven[2] %}
+        <div class="alert2">
+            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+            {{ notificationOven[1]['quantity'] }} {{ notificationOven[1]['name'] }} finished cooking!
+        </div> 
+        {% endif %}
+    </div>
+</body>
+</html>

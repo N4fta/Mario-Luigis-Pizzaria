@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Statistic page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/stats.css') }}"> 
+</head>
+<body>
+    <br>
+    <div class="header">
+        <div class="logo">
+            <h1>Statistic page</h1>
+        </div>
+        <div class="navigation_buttons">
+            <a href="../Yoshi/" class="home">
+                <img id="M&L" src="../static/images/M&L.png" alt="M&L" width="180" height="100" />
+            </a>
+        </div>
+    </div>
+    <hr>
+    <div class="row"></div>
+        {% if list == [] %}
+            <p>There are no orders</p>
+        {% else %}
+            
+                <div class="column">
+                <table>
+                    <tr>
+                        <th>Item ID</th>
+                        <th></th>
+                        <th>Item Name</th>
+                        <th></th>
+                        <th>Quantity</th>
+                        <th></th>
+                        <th>Total</th>
+                    </tr>
+                        {% for item in list %}
+                            <tr>
+                                <td>{{ item['ID'] }}</td>
+                                <td>-</td>
+                                <td>
+                                    {{ item['name'] }}
+                                    
+                                </td>
+                                <td>-</td>
+                                <td>
+                                    {{ item["quantity"]  }}
+                                    
+                                </td>
+                                <td>-</td>
+                                <td>
+                                    {{ (item["price"]*item["quantity"]) }} &euro;
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    
+                </table>
+                </div>
+        {% endif %}
+                <div class="column">
+                <table>
+                    <tr>
+                        <th>Total sold items</th>
+                        <th></th>
+                        <th>Total earned money</th>
+                    </tr>
+                    <tr>
+                        <td>{{ list_2['total_quantity'] }}</td>
+                        <td>-</td>
+                        <td>{{ list_2['total_price'] }} &euro;</td>
+                    </tr>
+                </table>
+                </div>
+                
+        <br>
+    </div>
+</body>
+</html>

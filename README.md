@@ -1,0 +1,1 @@
+This was a school project which has been finished and this application will thus no longer be updated/maintained.

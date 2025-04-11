@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+    <head>
+        <title>Login page</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/Login.css') }}"> 
+    </head>
+    <body>
+        <br><br><br><br>
+        <div class="send">
+            <form method="POST", action="/Register">
+                {{ form.hidden_tag() }}
+                <fieldset>
+                    <legend>Join the family today.</legend>
+                    <div>
+                        {{ form.username.label }}
+                        {{ form.username }}
+                    </div>
+                    <div>
+                        {{ form.email.label }}
+                        {{ form.email }}
+                    </div>
+                    <div>
+                        {{ form.password.label }}
+                        {{ form.password }}
+                    </div>
+                    <div>
+                        {{ form.confirm_password.label }}
+                        {{ form.confirm_password }}
+                    </div>
+                </fieldset>
+                <div>
+                    {{ form.submit }}
+                </div>
+            </form>
+            <div>
+                <small>
+                    Already have an account? <a class="ml-2" href="../Login">Sign in</a>
+                </small>
+            </div>
+        </div>
+    </body>
+</html>

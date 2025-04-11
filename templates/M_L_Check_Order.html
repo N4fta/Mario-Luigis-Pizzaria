@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cart</title>
+    <style>
+        body {
+            background-color: rgb(74, 186, 49);
+            
+        }
+
+        h2 {
+            font-family: 'Emblema One', cursive; 
+            font-size: 50px;
+        }
+
+        .number {
+            width: 50px;
+            text-align: center;
+        }
+
+        table {
+            font-family: 'Emblema One', cursive; 
+            border-collapse: collapse;
+            width: 90%;
+        }
+
+        td, th {
+            border: 1px solid rgb(0, 0, 0);
+            text-align: left;
+            padding: 8px;
+            width: auto;
+        }
+
+        tr:nth-child(even) {
+            background-color: rgb(0, 255, 55);
+        }
+
+        .info-container {
+            text-align: center;
+            background-color: rgb(0, 255, 55);
+            padding: 20px;
+            margin: 20px;
+            border-radius: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            border: 8px solid rgb(0, 0, 0);
+        }
+        
+        
+img#back-image {
+    position: absolute;
+    height: auto;
+    margin-top: 0px;
+    margin-left: 40px;
+    width: 300px
+}
+
+img#mushroom-image {
+    position: float;
+    margin-left: 100px;      
+    height: auto;
+    width: 300px;
+}
+
+    </style>
+</head>
+<body>
+
+    <a href="M_L_Order_Page.html" id="Back-button">
+        <img id="back-image" src="../static/images/image_2023-10-30_143605375.png" alt= "back">
+    </a>
+    
+    <div class="info-container">
+        <!-- Cart -->
+        <h2>Table {{ order['table'] }} Overview:</h2> 
+        <table>
+            <tr>
+                <th>Name</th>
+                <th class="number">Quantity</th>
+                <th class="number">Price</th>
+            </tr>
+            {% for item in order['cart'] %}
+            <tr>
+                <td>{{ item['name'] }}</td>
+                <td class="number">{{ item['quantity'] }}</td>
+                <td class="number">{{ item['price']*item['quantity'] }} &euro;</td>
+            </tr>
+            {% endfor %}
+        </table>
+        <br><br><br>
+        <h2>Estimated Time: {{m}}min {{s}}sec</h2>
+    </div>
+
+    <img id="mushroom-image" src="../static/images/800px-Super_Mushroom_Artwork_-_Super_Mario_3D_World.webp">
+</body>
+</html>

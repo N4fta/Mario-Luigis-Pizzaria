@@ -1,0 +1,1054 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/Mario_Luigi_layout.css') }}"> 
+    <title>Mario and Luigi's Pizzeria, Order Page</title>
+    <style>
+             #Margherita-image {
+            position: absolute;
+            margin-left: 120px;
+            margin-top: 230px;
+            height: auto;
+            width: 200px;
+            border: 8px solid black;
+            border-radius: 20px;
+        }
+
+        #calzone-image {
+            position: absolute;
+            margin-left: 770px;
+            margin-top: 230px;
+            height: 200px;
+            width: 200px;
+            border: 8px solid black;
+            border-radius: 20px;
+        }
+
+        #meatlovers-image {
+            position: absolute;
+            margin-left: 1420px;
+            margin-top: 230px;
+            height: 200px;
+            width: 200px;
+            border: 8px solid black;
+            border-radius: 20px;
+        }
+
+        #bbq_chicken-image {
+            position: absolute;
+            margin-left: 120px;
+            margin-top: 520px;
+            height: 200px;
+            width: 200px;
+            border: 8px solid black;
+            border-radius: 20px;
+        }
+
+        #prosciutto-image {
+            position: absolute;
+            margin-left: 770px;
+            margin-top: 520px;
+            height: 200px;
+            width: 200px;
+            border: 8px solid black;
+            border-radius: 20px;
+        }
+
+        #tuna-image {
+            position: absolute;
+            margin-left: 1420px;
+            margin-top: 520px;
+            height: 200px;
+            width: 200px;
+            border: 8px solid black;
+            border-radius: 20px;
+        }
+
+        #spinach-image {
+            position: absolute;
+            margin-left: 120px;
+            margin-top: 810px;
+            height: 200px;
+            width: 200px;
+            border: 8px solid black;
+            border-radius: 20px;
+        }
+
+        #caprese-image {
+            position: absolute;
+            margin-left: 770px;
+            margin-top: 810px;
+            height: 200px;
+            width: 200px;
+            border: 8px solid black;
+            border-radius: 20px;
+        }
+
+        #new_york-image {
+            position: absolute;
+            margin-left: 1420px;
+            margin-top: 810px;
+            height: 200px;
+            width: 200px;
+            border: 8px solid black;
+            border-radius: 20px;
+        }
+
+        #spicy-image {
+            position: absolute;
+            margin-left: 120px;
+            margin-top: 1100px;
+            height: 200px;
+            width: 200px;
+            border: 8px solid black;
+            border-radius: 20px;
+        }
+
+        #funghi-image {
+            position: absolute;
+            margin-left: 770px;
+            margin-top: 1100px;
+            height: 200px;
+            width: 200px;
+            border: 8px solid black;
+            border-radius: 20px;
+        }
+
+        #mix_stagioni-image {
+            position: absolute;
+            margin-left: 1430px;
+            margin-top: 1100px;
+            height: 200px;
+            width: 200px;
+            border: 8px solid black;
+            border-radius: 20px;
+        }
+
+        #Pepperoni-image {
+            position: absolute;
+            margin-left: 120px;
+            margin-top: 1390px;
+            height: 200px;
+            width: 200px;
+            border: 8px solid black;
+            border-radius: 20px;
+        }
+
+        #four_cheese-image {
+            position: absolute;
+            margin-left: 770px;
+            margin-top: 1390px;
+            height: 200px;
+            width: 200px;
+            border: 8px solid black;
+            border-radius: 20px;
+        }
+
+
+
+
+
+
+
+
+#margherita-square {
+    position: absolute;
+    margin-left: 90px; 
+    margin-top: 210px; 
+    width: 600px; 
+    height: 240px; 
+    background-color: rgb(0, 255, 55);
+    border: 8px solid rgb(0, 0, 0);
+    border-radius: 20px;
+}
+
+#calzone-square {
+    position: absolute;
+    margin-left: 740px; 
+    margin-top: 210px; 
+    width: 600px; 
+    height: 240px; 
+    background-color: rgb(0, 255, 55);
+    border: 8px solid rgb(0, 0, 0);
+    border-radius: 20px;
+}
+
+#meatlovers-square {
+    position: absolute;
+    margin-left: 1390px; 
+    margin-top: 210px; 
+    width: 600px; 
+    height: 240px; 
+    background-color: rgb(0, 255, 55);
+    border: 8px solid rgb(0, 0, 0);
+    border-radius: 20px;
+}
+
+#bbq_chicken-square {
+    position: absolute;
+    margin-left: 90px; 
+    margin-top: 500px; 
+    width: 600px; 
+    height: 240px; 
+    background-color: rgb(0, 255, 55);
+    border: 8px solid rgb(0, 0, 0);
+    border-radius: 20px;
+}
+
+#prosciutto-square {
+    position: absolute;
+    margin-left: 740px; 
+    margin-top: 500px; 
+    width: 600px; 
+    height: 240px; 
+    background-color: rgb(0, 255, 55);
+    border: 8px solid rgb(0, 0, 0);
+    border-radius: 20px;
+}
+
+#tuna-square {
+    position: absolute;
+    margin-left: 1390px; 
+    margin-top: 500px; 
+    width: 600px; 
+    height: 240px; 
+    background-color: rgb(0, 255, 55);
+    border: 8px solid rgb(0, 0, 0);
+    border-radius: 20px;
+}
+
+#spinach-square {
+    position: absolute;
+    margin-left: 90px; 
+    margin-top: 790px; 
+    width: 600px; 
+    height: 240px; 
+    background-color: rgb(0, 255, 55);
+    border: 8px solid rgb(0, 0, 0);
+    border-radius: 20px;
+}
+
+#caprese-square {
+    position: absolute;
+    margin-left: 740px; 
+    margin-top: 790px; 
+    width: 600px; 
+    height: 240px; 
+    background-color: rgb(0, 255, 55);
+    border: 8px solid rgb(0, 0, 0);
+    border-radius: 20px;
+}
+
+#new_york-square {
+    position: absolute;
+    margin-left: 1390px; 
+    margin-top: 790px; 
+    width: 600px; 
+    height: 240px; 
+    background-color: rgb(0, 255, 55);
+    border: 8px solid rgb(0, 0, 0);
+    border-radius: 20px;
+}
+
+#spicy-square {
+    position: absolute;
+    margin-left: 90px; 
+    margin-top: 1080px; 
+    width: 600px; 
+    height: 240px; 
+    background-color: rgb(0, 255, 55);
+    border: 8px solid rgb(0, 0, 0);
+    border-radius: 20px;
+}
+
+#fungi-square {
+    position: absolute;
+    margin-left: 740px; 
+    margin-top: 1080px; 
+    width: 600px; 
+    height: 240px; 
+    background-color: rgb(0, 255, 55);
+    border: 8px solid rgb(0, 0, 0);
+    border-radius: 20px;
+}
+
+#mix_stagioni-square {
+    position: absolute;
+    margin-left: 1390px; 
+    margin-top: 1080px; 
+    width: 600px; 
+    height: 240px; 
+    background-color: rgb(0, 255, 55);
+    border: 8px solid rgb(0, 0, 0);
+    border-radius: 20px;
+}
+
+#pepperoni-square {
+    position: absolute;
+    margin-left: 90px; 
+    margin-top: 1370px; 
+    width: 600px; 
+    height: 240px; 
+    background-color: rgb(0, 255, 55);
+    border: 8px solid rgb(0, 0, 0);
+    border-radius: 20px;
+}
+
+#four_cheese-square {
+    position: absolute;
+    margin-left: 740px; 
+    margin-top: 1370px; 
+    width: 600px; 
+    height: 240px; 
+    background-color: rgb(0, 255, 55);
+    border: 8px solid rgb(0, 0, 0);
+    border-radius: 20px;
+}
+
+
+
+
+
+
+.pizza-name {
+            position: absolute;
+            left: 300px;
+            top: 10px;
+            font-size: 30px;
+            color: black;
+            font-family: 'Emblema One', cursive; 
+        }
+
+
+.ingredients {
+            position: absolute;
+            left: 250px;
+            top: 50px;
+            font-size: 25px;
+            color: black;
+            font-family: 'Emblema One', cursive; 
+        }
+
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+.remove-button {
+    width: 20px; 
+    height: auto;
+    cursor: pointer;
+    margin-left: 10px; 
+}
+
+
+
+
+
+
+
+
+
+
+    #tiramisu-image {
+    position: absolute;
+    margin-left: 120px;
+    margin-top: 1910px; 
+    height: 200px;
+    width: 200px;
+    border: 8px solid black;
+    border-radius: 20px;
+}
+
+#colonel-image {
+    position: absolute;
+    margin-left: 770px;
+    margin-top: 1910px; 
+    height: 200px;
+    width: 200px;
+    border: 8px solid black;
+    border-radius: 20px;
+}
+
+#chocolate_mousse-image {
+    position: absolute;
+    margin-left: 1420px;
+    margin-top: 1910px; 
+    height: 200px;
+    width: 200px;
+    border: 8px solid black;
+    border-radius: 20px;
+}
+
+#cannoli-image {
+    position: absolute;
+    margin-left: 120px;
+    margin-top: 2200px; 
+    height: 200px;
+    width: 200px;
+    border: 8px solid black;
+    border-radius: 20px;
+}
+
+#panna_cotta-image {
+    position: absolute;
+    margin-left: 770px;
+    margin-top: 2200px; 
+    height: 200px;
+    width: 200px;
+    border: 8px solid black;
+    border-radius: 20px;
+}
+
+#affogato-image {
+    position: absolute;
+    margin-left: 1420px;
+    margin-top: 2200px; 
+    height: 200px;
+    width: 200px;
+    border: 8px solid black;
+    border-radius: 20px;
+}
+
+#gelato-image {
+    position: absolute;
+    margin-left: 120px;
+    margin-top: 2490px; 
+    height: 200px;
+    width: 200px;
+    border: 8px solid black;
+    border-radius: 20px;
+}
+
+#tiramisu-square {
+    position: absolute;
+    margin-left: 90px; 
+    margin-top: 1890px; 
+    width: 600px; 
+    height: 240px; 
+    background-color: rgb(0, 255, 55);
+    border: 8px solid rgb(0, 0, 0);
+    border-radius: 20px;
+}
+
+#colonel-square {
+    position: absolute;
+    margin-left: 740px; 
+    margin-top: 1890px; 
+    width: 600px; 
+    height: 240px; 
+    background-color: rgb(0, 255, 55);
+    border: 8px solid rgb(0, 0, 0);
+    border-radius: 20px;
+}
+
+#chocolate_mousse-square {
+    position: absolute;
+    margin-left: 1390px; 
+    margin-top: 1890px; 
+    width: 600px; 
+    height: 240px; 
+    background-color: rgb(0, 255, 55);
+    border: 8px solid rgb(0, 0, 0);
+    border-radius: 20px;
+}
+
+#cannoli-square {
+    position: absolute;
+    margin-left: 90px; 
+    margin-top: 2180px; 
+    width: 600px; 
+    height: 240px; 
+    background-color: rgb(0, 255, 55);
+    border: 8px solid rgb(0, 0, 0);
+    border-radius: 20px;
+}
+
+#panna_cotta-square {
+    position: absolute;
+    margin-left: 740px; 
+    margin-top: 2180px; 
+    width: 600px; 
+    height: 240px; 
+    background-color: rgb(0, 255, 55);
+    border: 8px solid rgb(0, 0, 0);
+    border-radius: 20px;
+}
+
+#affogato-square {
+    position: absolute;
+    margin-left: 1390px; 
+    margin-top: 2180px; 
+    width: 600px; 
+    height: 240px; 
+    background-color: rgb(0, 255, 55);
+    border: 8px solid rgb(0, 0, 0);
+    border-radius: 20px;
+}
+
+#gelato-square {
+    position: absolute;
+    margin-left: 90px; 
+    margin-top: 2470px; 
+    width: 600px; 
+    height: 240px; 
+    background-color: rgb(0, 255, 55);
+    border: 8px solid rgb(0, 0, 0);
+    border-radius: 20px;
+}
+
+
+
+
+
+
+.dessert-name {
+            position: absolute;
+            left: 300px;
+            top: 10px;
+            font-size: 30px;
+            color: black;
+            font-family: 'Emblema One', cursive; 
+        }
+
+
+.Description {
+            position: absolute;
+            left: 250px;
+            top: 50px;
+            font-size: 25px;
+            color: black;
+            font-family: 'Emblema One', cursive; 
+        }
+
+
+
+        
+
+
+
+
+
+
+
+        #san_pellegrino-image {
+    position: absolute;
+    margin-left: 120px;
+    margin-top: 2970px; 
+    height: 200px;
+    width: 200px;
+    border: 8px solid black;
+    border-radius: 20px;
+}
+
+#acqua_panna-image {
+    position: absolute;
+    margin-left: 770px;
+    margin-top: 2970px; 
+    height: 200px;
+    width: 200px;
+    border: 8px solid black;
+    border-radius: 20px;
+}
+
+#prosecco-image {
+    position: absolute;
+    margin-left: 1420px;
+    margin-top: 2970px; 
+    height: 200px;
+    width: 200px;
+    border: 8px solid black;
+    border-radius: 20px;
+}
+
+#red_whine-image {
+    position: absolute;
+    margin-left: 120px;
+    margin-top: 3260px; 
+    height: 200px;
+    width: 200px;
+    border: 8px solid black;
+    border-radius: 20px;
+}
+
+#white_whine-image {
+    position: absolute;
+    margin-left: 770px;
+    margin-top: 3260px; 
+    height: 200px;
+    width: 200px;
+    border: 8px solid black;
+    border-radius: 20px;
+}
+
+#limon_cello-image {
+    position: absolute;
+    margin-left: 1420px;
+    margin-top: 3260px; 
+    height: 200px;
+    width: 200px;
+    border: 8px solid black;
+    border-radius: 20px;
+}
+
+#birra_moretti-image {
+    position: absolute;
+    margin-left: 120px;
+    margin-top: 3530px; 
+    height: 200px;
+    width: 200px;
+    border: 8px solid black;
+    border-radius: 20px;
+}
+
+#acqua_panna-square {
+    position: absolute;
+    margin-left: 90px; 
+    margin-top: 2950px; 
+    width: 600px; 
+    height: 240px; 
+    background-color: rgb(0, 255, 55);
+    border: 8px solid rgb(0, 0, 0);
+    border-radius: 20px;
+}
+
+#san_pellegrino-square {
+    position: absolute;
+    margin-left: 740px; 
+    margin-top: 2950px; 
+    width: 600px; 
+    height: 240px; 
+    background-color: rgb(0, 255, 55);
+    border: 8px solid rgb(0, 0, 0);
+    border-radius: 20px;
+}
+
+#prosecco-square {
+    position: absolute;
+    margin-left: 1390px; 
+    margin-top: 2950px; 
+    width: 600px; 
+    height: 240px; 
+    background-color: rgb(0, 255, 55);
+    border: 8px solid rgb(0, 0, 0);
+    border-radius: 20px;
+}
+
+#red_whine-square {
+    position: absolute;
+    margin-left: 90px; 
+    margin-top: 3240px; 
+    width: 600px; 
+    height: 240px; 
+    background-color: rgb(0, 255, 55);
+    border: 8px solid rgb(0, 0, 0);
+    border-radius: 20px;
+}
+
+#white_whine-square {
+    position: absolute;
+    margin-left: 740px; 
+    margin-top: 3240px; 
+    width: 600px; 
+    height: 240px; 
+    background-color: rgb(0, 255, 55);
+    border: 8px solid rgb(0, 0, 0);
+    border-radius: 20px;
+}
+
+#limon_cello-square {
+    position: absolute;
+    margin-left: 1390px; 
+    margin-top: 3240px; 
+    width: 600px; 
+    height: 240px; 
+    background-color: rgb(0, 255, 55);
+    border: 8px solid rgb(0, 0, 0);
+    border-radius: 20px;
+}
+
+#birra_moretti-square {
+    position: absolute;
+    margin-left: 90px; 
+    margin-top: 3510px; 
+    width: 600px; 
+    height: 240px; 
+    background-color: rgb(0, 255, 55);
+    border: 8px solid rgb(0, 0, 0);
+    border-radius: 20px;
+}
+
+
+
+
+
+
+.drink-name {
+            position: absolute;
+            left: 300px;
+            top: 10px;
+            font-size: 30px;
+            color: black;
+            font-family: 'Emblema One', cursive; 
+        }
+
+
+.Description {
+            position: absolute;
+            left: 250px;
+            top: 50px;
+            font-size: 25px;
+            color: black;
+            font-family: 'Emblema One', cursive; 
+        }
+        
+        
+        #plus-image {
+            width: auto;
+            height: 50px;
+            margin-right: 10px;
+        }
+
+
+        #pizzas-image {
+            position: absolute;
+            margin-left: 740px;
+            margin-top: 30px;
+            height: 150px;
+            width: auto;
+        }
+
+        #desserts-image {
+            position: absolute;
+            margin-left: 740px;
+            margin-top: 1700px;
+            height: 150px;
+            width: auto;
+        }
+
+        #drinks-image {
+            position: absolute;
+            margin-left: 740px;
+            margin-top: 2770px;
+            height: 150px;
+            width: auto;
+        }
+
+        
+
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+</head>
+<body>
+    <a href="Mario_Luigi_Index.html" id="Back-button">
+        <img id="back-image" src="../static/images/image_2023-10-30_143605375.png" alt="back">
+    </a>
+
+    <img id="shopingcart-image" src="../static/images/image_2023-10-30_143843691.png" onclick="toggleCartPopup()">
+
+    <img id="pizzas-image" src="../static/images/image_2023-11-07_222156399.png" >
+    <img id="desserts-image" src="../static/images/dessert-removebg-preview.png" >
+    <img id="drinks-image" src="../static/images/drinks.png" >
+
+    <!-- <img id="plus-image" src="plus pizza.png"> -->
+
+
+    <div id="margherita-square">
+        <div class="pizza-name">Margherita</div>
+        <div class="ingredients">Ingredients: Tomato sauce, Mozarella cheese, Basil leaves. </div>
+    </div>
+    <div id="calzone-square">
+        <div class="pizza-name">Pizza Calzone</div>
+        <div class="ingredients">Ingredients: Tomato sauce, Mozarella cheese, Ham.</div>
+    </div>
+    <div id="four_cheese-square">
+        <div class="pizza-name">Pizza 4 Cheeses</div>
+        <div class="ingredients">Ingredients: Tomato sauce, Mozzarella, gorgonzola, Parmigiano Reggiano, and goat cheese.</div>
+    </div>
+    <div id="pepperoni-square">
+        <div class="pizza-name">Pizza Pepperoni</div>
+        <div class="ingredients">Ingredients: Tomato sauce, Mozarella cheese, Pepperoni.</div>
+    </div>
+    <div id="meatlovers-square">
+        <div class="pizza-name">Pizza Meatlovers</div>
+        <div class="ingredients">Ingredients: Tomato sauce, Mozarella cheese, Ham, Chicken, Bacon.</div>
+    </div>
+    <div id="bbq_chicken-square">
+        <div class="pizza-name">Pizza BBQ Chicken</div>
+        <div class="ingredients">Ingredients: Tomato sauce, Mozarella cheese, Chicken, Paprika.</div>
+    </div>
+    <div id="prosciutto-square">
+        <div class="pizza-name">Pizza Prosciutto</div>
+        <div class="ingredients">Ingredients: Tomato sauce, Mozarella cheese, ham.</div>
+    </div>
+    <div id="tuna-square">
+        <div class="pizza-name">Pizza Tuna</div>
+        <div class="ingredients">Ingredients: Tomato sauce, Mozarella cheese, Tuna.</div>
+    </div>
+    <div id="spinach-square">
+        <div class="pizza-name">Pizza Spinach</div>
+        <div class="ingredients">Ingredients: Tomato sauce, Mozarella cheese, Spinach.</div>
+    </div>
+    <div id="caprese-square">
+        <div class="pizza-name">Pizza Caprese</div>
+        <div class="ingredients">Ingredients: Tomato sauce, Mozzarella cheese, Mozarella, Tomato.</div>
+    </div>
+    <div id="new_york-square">
+        <div class="pizza-name">New york pizza</div>
+        <div class="ingredients">Ingredients: Tomato sauce, Mozarella cheese, Ground beef, Mushroom, Paprika, Olives.</div>
+    </div>
+    <div id="spicy-square">
+        <div class="pizza-name">Pizza Spicy Peppers</div>
+        <div class="ingredients">Ingredients: Tomato sauce, Mozarella cheese, Hot chicken, green Peppers.</div>
+    </div>
+    <div id="fungi-square">
+        <div class="pizza-name">Pizza Fungi</div>
+        <div class="ingredients">Ingredients: Tomato sauce, Mozarella cheese, Mushrooms, Truffels.</div>
+    </div>
+    <div id="mix_stagioni-square">
+        <div class="pizza-name">Pizza Mix Stagioni</div>
+        <div class="ingredients">Ingredients: Tomato sauce, Mozarella cheese, Ground beef, Pepperoni, Red union.</div>
+    </div>
+
+    
+    
+    <img id="Margherita-image" src="../static/images/margherita_2017.avif" onclick="addToCart('Margherita', 11)">
+    <img id="Pepperoni-image" src="../static/images/double-pepperoni_2017 (1).avif" onclick="addToCart('Pepperoni', 14)">
+    <img id="four_cheese-image" src="../static/images/4-cheese_2017.jpg" onclick="addToCart('4 Cheeses', 12)">
+    <img id="calzone-image" src="../static/images/calzone-2.jpg" onclick="addToCart('Calzone', 14)">
+    <img id="meatlovers-image" src="../static/images/bbq-meatlovers_2017.jpg" onclick="addToCart('Meat Lovers', 13)">
+    <img id="bbq_chicken-image" src="../static/images/pizza_bbqchickenbacon.avif" onclick="addToCart('BBQ Chicken', 15)">
+    <img id="prosciutto-image" src="../static/images/prosciutto.jpg" onclick="addToCart('Prosciutto', 13)">
+    <img id="tuna-image" src="../static/images/tuna_2017.jpg" onclick="addToCart('Tuna', 16)">
+    <img id="spinach-image" src="../static/images/2023-q4-garlic-chicken-spinach.jpg" onclick="addToCart('Spinach', 16)">
+    <img id="caprese-image" src="../static/images/2023-q4-capresepizza.avif" onclick="addToCart('Caprese', 15)">
+    <img id="new_york-image" src="../static/images/pizza_newyorkpizza.avif" onclick="addToCart('New York', 11)">
+    <img id="spicy-image" src="../static/images/mexican_hotspicy.jpg" onclick="addToCart('Spicy', 15)">
+    <img id="funghi-image" src="../static/images/funghi.jpg" onclick="addToCart('Funghi', 15)">
+    <img id="mix_stagioni-image" src="../static/images/mixed_4_stagioni.jpg" onclick="addToCart('4 Stagioni', 16)">
+
+
+
+
+
+    <div id="tiramisu-square">
+        <div class="dessert-name">Tiramisu</div>
+        <div class="Description">Description: Dessert with coffee-soaked ladyfingers and creamy mascarpone.</div>
+    </div>
+    <div id="colonel-square">
+        <div class="dessert-name">Colonel</div>
+        <div class="Description">Description: Lemon or lime sorbet with a shot of vodka.</div>
+    </div>
+    <div id="chocolate_mousse-square">
+        <div class="dessert-name">Chocolate Mousse</div>
+        <div class="Description">Description: Dessert made from whipped chocolate, sugar, and cream. It has a silky, airy texture and a chocolatey flavor.</div>
+    </div>
+    <div id="cannoli-square">
+        <div class="dessert-name">Cannoli</div>
+        <div class="Description">Description: Italian pastry with sweet ricotta filling.</div>
+    </div>
+    <div id="panna_cotta-square">
+        <div class="dessert-name">Panna Cotta</div>
+        <div class="Description">Description: Dessert with silky, creamy texture made by setting vanilla-infused cream with gelatin.</div>
+    </div>
+    <div id="affogato-square">
+        <div class="dessert-name">Affogato</div>
+        <div class="Description">Description: Ice cream with a shot of espresso..</div>
+    </div>
+    <div id="gelato-square">
+        <div class="dessert-name">Gelato</div>
+        <div class="Description">Description: Italian ice cream.</div>
+    </div>
+
+    <img id="tiramisu-image" src="../static/images/tiramisu-cake-dark-black-background-studio-photo-generative-ai_74760-1750.avif" onclick="addToCart('Tiramisu', 9)">
+    <img id="colonel-image" src="../static/images/colonel.jpg" onclick="addToCart('The Colonel', 7)">
+    <img id="chocolate_mousse-image" src="../static/images/Easy-Chocolate-Mousse-Baker-by-Nature-12636.jpg" onclick="addToCart('Chocolate Mousse', 6)">
+    <img id="cannoli-image" src="../static/images/Cannoli.jpg" onclick="addToCart('Cannoli', 7)">
+    <img id="panna_cotta-image" src="../static/images/Latte-Machiatio-pannacotta.jpg" onclick="addToCart('Panna Cotta', 7)">
+    <img id="affogato-image" src="../static/images/affogato.jpg" onclick="addToCart('Affogato', 5)">
+    <img id="gelato-image" src="../static/images/gelato caramello.jpg" onclick="addToCart('Gelato', 5)">
+
+
+
+
+
+
+    <div id="acqua_panna-square">
+        <div class="drink-name">Acqua Panna</div>
+        <div class="Description"> Description: Premium Italian mineral water.</div>
+    </div>
+    <div id="san_pellegrino-square">
+        <div class="drink-name">San Pellegrino</div>
+        <div class="Description"> Description:  Premium Italian sparkling water.</div>
+    </div>
+    <div id="prosecco-square">
+        <div class="drink-name">Prosecco</div>
+        <div class="Description"> Description: Italian sparkling wine.</div>
+    </div>
+    <div id="red_whine-square">
+        <div class="drink-name">Red Whine</div>
+        <div class="Description"> Description: Made from dark grapes, rich in flavor.</div>
+    </div>
+    <div id="white_whine-square">
+        <div class="drink-name">White Whine</div>
+        <div class="Description"> Description: Made from green grapes, fruity and light.</div>
+    </div>
+    <div id="limon_cello-square">
+        <div class="drink-name">Limon Cello</div>
+        <div class="Description"> Description: Sweet lemon liqueur from Italy.</div>
+    </div>
+    <div id="birra_moretti-square">
+        <div class="drink-name">Birra Moretti</div>
+        <div class="Description"> Description: Italian lager beer.</div>
+    </div>
+
+
+    <img id="acqua_panna-image" src="../static/images/acqua panna.webp" onclick="addToCart('Acqua Panna', 3)">
+    <img id="prosecco-image" src="../static/images/prosecco.jpg" onclick="addToCart('Prosecco', 10)">
+    <img id="red_whine-image" src="../static/images/red whine.avif" onclick="addToCart('House Red', 9)">
+    <img id="white_whine-image" src="../static/images/bottle-glass-white-wine-black-background_219717-1809.avif" onclick="addToCart('House White', 9)">
+    <img id="limon_cello-image" src="../static/images/limon cello.jpg" onclick="addToCart('Limoncello', 9)">
+    <img id="birra_moretti-image" src="../static/images/birra-moretti.jpg" onclick="addToCart('Birra Moretti', 8)">
+    <img id="san_pellegrino-image" src="../static/images/Screenshot 2023-11-04 212811.png" onclick="addToCart('San Pellegrino', 3)">
+    
+
+
+    <div id="cart-popup">
+        <h2>Shopping Cart</h2>
+        <ul id="cart-items">
+            <!-- Cart items -->
+        </ul>
+        <p id="total-cost">Total Cost: $0.00</p>
+        <label for="tableNumber" class="tableInputLabel">Table Number:</label>
+        <input class="tableInput" type="number" name="tableNumber" value='' min="1" max="25" required>
+        <button class="checkout-image" onclick="checkoutCart()"><img class="checkout-image" src="../static/images/image_2023-11-06_110552049.png"></button>
+    </div>
+
+    
+
+    <script>
+       function toggleCartPopup() {
+        var cartPopup = document.getElementById("cart-popup");
+        cartPopup.style.display = cartPopup.style.display === "block" ? "none" : "block";
+    }
+
+    var cart = [];
+
+    function addToCart(pizzaName, pizzaPrice) {
+        cart.push({ name: pizzaName, price: pizzaPrice });
+
+        var cartItems = document.getElementById("cart-items");
+        var existingItem = findExistingCartItem(pizzaName);
+
+        if (existingItem) {
+            const quantity = Number(existingItem.dataset.quantity) + 1;
+            existingItem.dataset.quantity = quantity;
+            existingItem.textContent = `${pizzaName} ${quantity}x - $${(quantity * pizzaPrice).toFixed(2)}`;
+        } else {
+            var listItem = document.createElement("li");
+            listItem.classList.add("cart-item");
+
+            var itemInfo = document.createElement("div");
+            itemInfo.dataset.name = pizzaName;
+            itemInfo.textContent = `${pizzaName} 1x - $${pizzaPrice.toFixed(2)}`;
+            itemInfo.dataset.quantity = 1;
+            listItem.appendChild(itemInfo);
+
+            var removeButton = document.createElement("img");
+            removeButton.src = "../static/images/minus.png";
+            removeButton.className = "remove-button";
+            removeButton.style.cursor = "pointer";
+            removeButton.addEventListener("click", function () {
+                removeCartItem(pizzaName, pizzaPrice, listItem);
+            });
+
+            listItem.appendChild(removeButton);
+            cartItems.appendChild(listItem);
+        }
+
+        updateTotalCost();
+    }
+
+    function findExistingCartItem(pizzaName) {
+        var cartItems = document.getElementById("cart-items").getElementsByClassName("cart-item");
+        for (var i = 0; i < cartItems.length; i++) {
+            var itemInfo = cartItems[i].querySelector("div");
+            if (itemInfo.textContent.startsWith(pizzaName)) {
+                return itemInfo;
+            }
+        }
+        return null;
+    }
+
+    function removeCartItem(pizzaName, pizzaPrice, cartItem) {
+        var quantity = Number(cartItem.querySelector("div").dataset.quantity);
+        if (quantity > 1) {
+            quantity -= 1;
+            cartItem.querySelector("div").dataset.quantity = quantity;
+            cartItem.querySelector("div").textContent = `${pizzaName} ${quantity}x - $${(quantity * pizzaPrice).toFixed(2)}`;
+        } else {
+            document.getElementById("cart-items").removeChild(cartItem);
+            cart = cart.filter(item => item.name !== pizzaName);
+        }
+
+        updateTotalCost();
+    }
+
+    function updateTotalCost() {
+            var cartItems = document.getElementById("cart-items").getElementsByTagName("li");
+            var totalCost = 0;
+            for (var i = 0; i < cartItems.length; i++) {
+                var itemText = cartItems[i].textContent;
+                var price = parseFloat(itemText.match(/\$\d+\.\d+/)[0].substring(1));
+                totalCost += price;
+            }
+            document.getElementById("total-cost").textContent = "Total Cost: $" + totalCost.toFixed(2);
+        }
+
+    
+    function checkoutCart(){
+        var cartItems = document.getElementById("cart-items").getElementsByClassName("cart-item");
+        var temp = [];
+        var cartList = [];
+        var tableNumber = document.getElementsByName("tableNumber")[0].value;
+        if (tableNumber>25 || tableNumber<1){
+            alert("Hey! You forgot to add a valid table number!\nTry a number between 1-25");
+            return;
+        }
+        for (var i = 0; i < cartItems.length; i++) {
+            var itemInfo = cartItems[i].querySelector("div");
+            temp.push(itemInfo.dataset.name);
+            temp.push(itemInfo.dataset.quantity);
+            cartList.push(temp);
+            console.log(cartList);
+            temp = [];
+        }
+        if (cartList.length==0){
+            alert("Hey! You forgot to add items to your cart!");
+            return;
+        }
+        $.ajax({
+                type: "POST",
+                url: "/checkout",
+                contentType: "application/json",
+                data: JSON.stringify({'cart': cartList, 'table': tableNumber}),
+                dataType: "json",
+                success: function(response) {
+                    console.log(response);
+                    cartItems=[];
+                },
+                error: function(err) {
+                    console.log(err);
+                }
+            });
+        
+        setTimeout( function(){
+            window.location.href="/Customers/M_L_Check_Order.html";
+        }, 1000);
+    }
+    </script>
+</body>
+</html>

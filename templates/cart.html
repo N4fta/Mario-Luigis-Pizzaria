@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cart</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/Menu.css') }}"> 
+    
+</head>
+<body>
+    <!-- Cart --> 
+    <br>
+    <div class="header">
+        <div class="logo">
+            <h1>Cart Overview:</h1>
+        </div>
+        <div class="navigation_buttons">
+            <a href="/Mario" class="home">
+                <img src="https://dodo.ac/np/images/c/cc/Mario_Hat_NH_Icon.png" alt="Marios-Hat" width="100" height="100" />
+            </a>
+        </div>
+    </div>
+    <br>
+    <br>
+    <hr>
+    <br>
+    <div class = "cart_page">
+        <table>
+            <tr>
+            <th class="number">ID</th>
+            <th>Name</th>
+            <th class="number">Quantity</th>
+            <th class="number">Price</th>
+            <th>Notes</th>
+            </tr>
+            {% for item in cart %}
+            <tr>
+            <td class="number">{{ item['ID'] }}</td>
+            <td>{{ item['name'] }}</td>
+            <td class="number">{{ item['quantity'] }}</td>
+            <td class="number">{{ item['price']*item['quantity'] }} &euro;</td>
+            <td>{{ item['notes'] }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+    <br><br><br>
+    <div class = "send">
+        <form method='post' action='#'>
+            <!-- Table number input field -->
+            <label for="Table Number">Table Number:</label>
+            <input type='number' name="tableNumber" class="number" value='1' min="1" max="30" required/>
+            <input type="submit" value="Submit" class = "submit">
+        </form>
+    </div>
+</body>
+</html>

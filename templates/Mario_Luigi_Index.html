@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mario and Luigi's Pizzeria</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/Mario_Luigi_layout.css') }}"> 
+    <style>
+        body {
+    margin: 0;
+    padding: 0;
+    background-image: url('../static/images/homepage\ 4.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh; 
+    overflow: auto; 
+    background-position: center center;
+}
+div {
+   margin-top: 0px;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+}
+
+img#Order-image {
+    width: 400px; 
+    height: auto;
+}
+
+img#About_us-image {
+    width: 380px; 
+    height: auto;
+}
+
+img#Welcome_to_pizzaria-image {
+    margin-top: 0px;
+    width: 1000px; 
+    height: auto;
+}
+
+img#login-image{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 300px;
+}
+    </style>
+</head>
+<body>
+    <div>
+        <img id="Welcome_to_pizzaria-image" src="../static/images/image_2023-10-30_143055147.png" alt="Welcome_to_pizzaria">
+    </div>
+
+    <a href="M_L_Order_Page.html" id="Order">
+        <img id="Order-image" src="../static/images/image_2023-10-30_142842058.png" alt= "Order">
+    </a>
+
+    <a href="M_L_About_Us.html" id="About_us-button">
+        <img id="About_us-image" src="../static/images/image_2023-10-30_142324826.png" alt= "About_us">
+    </a>
+
+    <a href="../Login" id="login-button">
+        <img id="login-image" src="../static/images/Screenshot_2023-11-07_185037-removebg-preview.png" alt= "Login">
+    </a>
+
+</body>
+</html>
